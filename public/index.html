@@ -4,33 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/index.js"></script>
     <title>Mid Term Exam</title>
   </head>
   <body class="w-screen h-screen">
-    <div class="w-[80%] border rounded-md p-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div
+      class="w-[80%] md:w-[40%] border rounded-md p-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <h1 class="text-2xl font-bold text-center">Login to MidTerm</h1>
-      <form action="#">
+      <form aaction="#" method="post">
         <div class="py-2 flex flex-col gap-2">
-          <label for="">Username</label>
-          <input type="text" name="" id="" class="border p-2 rounded-md" />
+          <label for="">Email</label>
+          <input required placeholder="Email" type="email" id="email" name="email" class="border p-2 rounded-md" />
         </div>
         <div class="py-2 flex flex-col gap-2">
           <label for="">Password</label>
-          <input type="password" name="" id="" class="border p-2 rounded-md" />
+          <input placeholder="Password" type="password" id="password" class="border p-2 rounded-md" />
         </div>
-        <input type="submit" value="Login" class="bg-blue-500 text-white px-4 py-2 border rounded-lg" />
+        <button id="sign-in-2" type="button" class="w-full bg-blue-500 text-white px-4 py-2 border rounded-lg">
+          Sign In
+        </button>
       </form>
       <div class="flex gap-2 justify-between mt-4">
         <button
+          id="sign-in-button"
           class="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg hover:border-slate-200 hover:bg-slate-200 hover:text-slate-900 hover:shadow transition duration-150">
-          <img
-            class="w-6 h-6"
-            src="https://www.svgrepo.com/show/475656/google-color.svg"
-            loading="lazy"
-            alt="google logo" />
+          <img class="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" alt="google logo" />
           <span>Login with Google</span>
         </button>
-        <button class="bg-blue-500 text-white px-4 py-2 border rounded-lg">Phone autenthication</button>
+        <button id="sign-in-3" class="bg-blue-500 text-white px-4 py-2 border rounded-lg">Phone autenthication</button>
       </div>
     </div>
   </body>
